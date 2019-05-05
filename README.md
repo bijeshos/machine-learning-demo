@@ -45,36 +45,36 @@ It is assumed that the following is already configured in the local machine:
 The TensorFlow examples has two flavours: v1 and v2 (alpha). Following are details of the examples and corresponding program files. 
 - v1
     - Basic Evaluation
-        - basic-evaluation.py 
+        - [basic-evaluation.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v1/basic-evaluation.py)
 - v2 (alpha)
     - Hello World
         - Basic 
-            -  basic-hello-world.py
+            -  [basic-hello-world.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/hello-world/basic-hello-world.py)
         - Advanced 
-            - advanced-hello-world.py
+            - [advanced-hello-world.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/hello-world/advanced-hello-world.py)
     
     - Classification Examples
         - Text Classification
-            - text-classification.py
+            - [text-classification.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/classification/text-classification.py)
         - Image Classification
-            - image-classification.py
+            - [image-classification.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/classification/image-classification.py)
         - Structured Data Classification
-            - structured-data-classification.py
+            - [structured-data-classification.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/classification/structured-data-classification.py)
     
     - Exploring Datasets
-        - dataset-example.py
+        - [dataset-example.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/datasets/dataset-example.py)
     
     - Using Keras API
         - Keras API Basic
-            - keras-basics.py
+            - [keras-basics.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/keras/keras-basics.py)
         - Keras API Overview
-            - keras-overview.py
+            - [keras-overview.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/keras/keras-overview.py)
     
     - Regression Example
-        - fuel-efficiency-prediction-regression.py
+        - [fuel-efficiency-prediction-regression.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/regression/fuel-efficiency-prediction-regression.py)
     
     - Tensorboard Usage
-        - tensorboard-example.py
+        - [tensorboard-example.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/tensorboard/tensorboard-example.py)
 
 
 ## Reference
