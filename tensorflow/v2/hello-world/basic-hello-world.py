@@ -31,3 +31,4 @@ model.fit(x_train, y_train, epochs=5)
 
 print("Evaluating the model")
 model.evaluate(x_test, y_test)
+print("Program completed")

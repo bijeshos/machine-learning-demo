@@ -92,3 +92,5 @@ for epoch in range(EPOCHS):
                           train_accuracy.result() * 100,
                           test_loss.result(),
                           test_accuracy.result() * 100))
+
+print("Program completed")

@@ -201,5 +201,5 @@ plt.xlabel("Prediction Error [MPG]")
 _ = plt.ylabel("Count")
 
 print("----------------------------------")
-print("The End :-)")
+print("Program completed")
 print("----------------------------------")
