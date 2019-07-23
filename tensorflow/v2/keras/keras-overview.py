@@ -75,3 +75,4 @@ val_labels = np.random.random((100, 10))
 
 model.fit(data, labels, epochs=10, batch_size=32,
           validation_data=(val_data, val_labels))
+print("Program completed")

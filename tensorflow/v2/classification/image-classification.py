@@ -187,5 +187,5 @@ _ = plt.xticks(range(10), class_names, rotation=45)
 np.argmax(predictions_single[0])
 
 print("----------------------------------")
-print("The End :-)")
+print("Program completed")
 print("----------------------------------")

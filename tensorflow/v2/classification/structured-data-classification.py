@@ -152,3 +152,4 @@ print("Evaluating the model")
 loss, accuracy = model.evaluate(test_ds)
 
 print("Accuracy: ", accuracy)
+print("Program completed")

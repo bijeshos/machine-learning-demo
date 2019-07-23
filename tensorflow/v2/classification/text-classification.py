@@ -140,5 +140,5 @@ plt.legend()
 plt.show()
 
 print("----------------------------------")
-print("The End :-)")
+print("Program completed")
 print("----------------------------------")
