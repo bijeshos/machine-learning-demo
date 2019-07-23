@@ -32,26 +32,21 @@ It is assumed that the following is already configured in the local machine:
     - $ pip install --upgrade pip
     - $ pip list
 
-- Install tensorflow
+- Install Tensorflow
     - $ pip install --upgrade tensorflow
     - or 
-    - pip install tensorflow==2.0.0-alpha0 
+    - pip install tensorflow==2.0.0-beta 
     
-- Verify tensorflow installation
-    - v1
-        - $ python -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"    
 ## How to use the examples
 
-The TensorFlow examples has two flavours: v1 and v2 (alpha). Following are details of the examples and corresponding program files. 
-- v1
-    - Basic Evaluation
-        - [basic-evaluation.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v1/basic-evaluation.py)
-- v2 (alpha)
-    - Hello World
-        - Basic 
-            -  [basic-hello-world.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/hello-world/basic-hello-world.py)
-        - Advanced 
-            - [advanced-hello-world.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/hello-world/advanced-hello-world.py)
+The TensorFlow examples in this repo have two flavours: v2(beta) and v1(stable). 
+Following are details of the examples and corresponding program files. 
+
+- v2 (beta)
+    - Basics
+        - [basic-hello-world.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/basics/basic-hello-world.py)
+        - [advanced-hello-world.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/basics/advanced-hello-world.py)
+        - [temperature_conversion.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/basics/temperature_conversion.py)
     
     - Classification Examples
         - Text Classification
@@ -76,6 +71,13 @@ The TensorFlow examples has two flavours: v1 and v2 (alpha). Following are detai
     - Tensorboard Usage
         - [tensorboard-example.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/tensorboard/tensorboard-example.py)
 
+- v1
+    - Basic Evaluation
+        - [basic-evaluation.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v1/basic-evaluation.py)
+
+## What's next
+Above mentioned are just a starting point (Thanks to TensorFlow documentation). More examples are being created. As and when they are ready, it will be added to this repository. 
+
 
 ## Reference
-https://www.tensorflow.org/alpha
+https://www.tensorflow.org/beta
