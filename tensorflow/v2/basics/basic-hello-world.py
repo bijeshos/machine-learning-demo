@@ -1,5 +1,5 @@
 """
-This is a basic hello-world style program
+A simple program to train and evaluate using MNIST dataset
 """
 
 from __future__ import absolute_import, division, print_function
