@@ -10,6 +10,7 @@ from tensorflow.python.keras import Model
 # from tensorflow.keras import Model
 
 # load and prepare MNIST dataset
+print("Loading MNIST dataset")
 dataset, info = tfds.load('mnist', with_info=True, as_supervised=True)
 mnist_train, mnist_test = dataset['train'], dataset['test']
 
@@ -19,7 +20,7 @@ def convert_types(image, label):
     image /= 255
     return image, label
 
-
+print("Preparing train and test sets")
 mnist_train = mnist_train.map(convert_types).shuffle(10000).batch(32)
 mnist_test = mnist_test.map(convert_types).batch(32)
 
@@ -57,6 +58,7 @@ test_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='test_accuracy')
 # train the model
 @tf.function
 def train_step(image, label):
+    print("performing training")
     with tf.GradientTape() as tape:
         predictions = model(image)
         loss = loss_object(label, predictions)
@@ -70,6 +72,7 @@ def train_step(image, label):
 # test the model
 @tf.function
 def test_step(image, label):
+    print("performing testing")
     predictions = model(image)
     t_loss = loss_object(label, predictions)
 
