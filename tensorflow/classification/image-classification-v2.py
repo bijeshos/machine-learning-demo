@@ -82,7 +82,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 # specify configuration for tensorboard
-log_dir = "logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+log_dir = "./../../logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
 print("Training the model")
@@ -205,6 +205,12 @@ np.argmax(predictions_single[0])
 
 # todo: check this later
 # file_writer = tf.summary.FileWriter('/path/to/logs', sess.graph)
+
+print("----------------------------------")
+print("Open a terminal in this dir and execute the following to view run details on tensorboard")
+print("tensorboard --logdir ./../../logs/fit/")
+print("----------------------------------")
+
 
 print("----------------------------------")
 print("Program completed")
