@@ -42,34 +42,34 @@ It is assumed that the following is already configured in the local machine:
 The TensorFlow examples in this repo have two flavours: v2(beta) and v1(stable). 
 Following are details of the examples and corresponding program files. 
 
-- v2 (beta)
-    - Basics
-        - [basic-hello-world.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/basics/basic-hello-world.py)
-        - [advanced-hello-world.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/basics/advanced-hello-world.py)
-        - [temperature_conversion.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/basics/temperature_conversion.py)
-    
-    - Classification Examples
-        - Text Classification
-            - [text-classification.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/classification/text-classification.py)
-        - Image Classification
-            - [image-classification.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/classification/image-classification.py)
-        - Structured Data Classification
-            - [structured-data-classification.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/classification/structured-data-classification.py)
-    
-    - Exploring Datasets
-        - [dataset-example.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/datasets/dataset-example.py)
-    
-    - Using Keras API
-        - Keras API Basic
-            - [keras-basics.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/keras/keras-basics.py)
-        - Keras API Overview
-            - [keras-overview.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/keras/keras-overview.py)
-    
-    - Regression Example
-        - [fuel-efficiency-prediction-regression.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/regression/fuel-efficiency-prediction-regression.py)
-    
-    - Tensorboard Usage
-        - [tensorboard-example.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflow/v2/tensorboard/tensorboard-example.py)
+
+- Basics
+    - [basic-hello-world.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflowbasics/basic-hello-world.py)
+    - [advanced-hello-world.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflowbasics/advanced-hello-world.py)
+    - [temperature_conversion.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflowbasics/temperature_conversion.py)
+
+- Classification Examples
+    - Text Classification
+        - [text-classification.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflowclassification/text-classification.py)
+    - Image Classification
+        - [image-classification.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflowclassification/image-classification.py)
+    - Structured Data Classification
+        - [structured-data-classification.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflowclassification/structured-data-classification.py)
+
+- Exploring Datasets
+    - [dataset-example.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflowdatasets/dataset-example.py)
+
+- Using Keras API
+    - Keras API Basic
+        - [keras-basics.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflowkeras/keras-basics.py)
+    - Keras API Overview
+        - [keras-overview.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflowkeras/keras-overview.py)
+
+- Regression Example
+    - [fuel-efficiency-prediction-regression.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflowregression/fuel-efficiency-prediction-regression.py)
+
+- Tensorboard Usage
+    - [tensorboard-example.py](https://github.com/bijeshos/machine-learning-demo/blob/master/tensorflowtensorboard/tensorboard-example.py)
 
 - v1
     - Basic Evaluation
