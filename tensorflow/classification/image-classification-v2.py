@@ -86,6 +86,7 @@ log_dir = "./../../logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S"
 tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
 print("Training the model")
+# use below line if tensorboard integration is not needed
 # model.fit(train_images, train_labels, epochs=5)
 
 model.fit(train_images,
