@@ -10,7 +10,7 @@ import pandas as pd
 import tensorflow as tf
 
 from tensorflow import feature_column
-from tensorflow.keras import layers
+from tensorflow import keras
 from sklearn.model_selection import train_test_split
 
 # Import Cleveland Clinic Foundation for Heart Disease CSV
@@ -62,7 +62,7 @@ example_batch = next(iter(train_ds))[0]
 # A utility method to create a feature column
 # and to transform a batch of data
 def demo(feature_column):
-    feature_layer = layers.DenseFeatures(feature_column)
+    feature_layer = keras.layers.DenseFeatures(feature_column)
     print(feature_layer(example_batch).numpy())
 
 
@@ -133,9 +133,9 @@ test_ds = df_to_dataset(test, shuffle=False, batch_size=batch_size)
 print("Create, compile, and train the model")
 model = tf.keras.Sequential([
     feature_layer,
-    layers.Dense(128, activation='relu'),
-    layers.Dense(128, activation='relu'),
-    layers.Dense(1, activation='sigmoid')
+    keras.layers.Dense(128, activation='relu'),
+    keras.layers.Dense(128, activation='relu'),
+    keras.layers.Dense(1, activation='sigmoid')
 ])
 
 print("Configuring optimizer")
