@@ -1,18 +1,18 @@
+"""
+A simple program to train and evaluate using MNIST dataset, in a more structured way
+"""
+
 from __future__ import absolute_import, division, print_function
 
 import tensorflow_datasets as tfds
 import tensorflow as tf
-
-from tensorflow.python.keras.layers import Dense, Flatten, Conv2D
-from tensorflow.python.keras import Model
-
-# from tensorflow.keras.layers import Dense, Flatten, Conv2D
-# from tensorflow.keras import Model
+from tensorflow.keras.layers import Dense, Flatten, Conv2D
+from tensorflow.keras import Model
 
 # load and prepare MNIST dataset
 print("Loading MNIST dataset")
 dataset, info = tfds.load('mnist', with_info=True, as_supervised=True)
-mnist_train, mnist_test = dataset['train'], dataset['test']
+train_dataset, test_dataset = dataset['train'], dataset['test']
 
 
 def convert_types(image, label):
@@ -22,14 +22,14 @@ def convert_types(image, label):
 
 
 print("Preparing train and test sets")
-mnist_train = mnist_train.map(convert_types).shuffle(10000).batch(32)
-mnist_test = mnist_test.map(convert_types).batch(32)
+train_dataset = train_dataset.map(convert_types).shuffle(10000).batch(32)
+test_dataset = test_dataset.map(convert_types).batch(32)
 
 
 # build model using keras model subclassing API
-class MyModel(Model):
+class CustomModel(Model):
     def __init__(self):
-        super(MyModel, self).__init__()
+        super(CustomModel, self).__init__()
         self.conv1 = Conv2D(32, 3, activation='relu')
         self.flatten = Flatten()
         self.d1 = Dense(128, activation='relu')
@@ -42,9 +42,9 @@ class MyModel(Model):
         return self.d2(x)
 
 
-model = MyModel()
+model = CustomModel()
 
-# choose an optimzer and loss function for training
+# choose an optimizer and loss function for training
 loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
 optimizer = tf.keras.optimizers.Adam()
 
@@ -56,7 +56,7 @@ test_loss = tf.keras.metrics.Mean(name='test_loss')
 test_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='test_accuracy')
 
 
-# train the model
+# function to train the model
 @tf.function
 def train_step(image, label):
     print("inside train_step")
@@ -70,7 +70,7 @@ def train_step(image, label):
     train_accuracy(label, predictions)
 
 
-# test the model
+# function to test the model
 @tf.function
 def test_step(image, label):
     print("inside test_step")
@@ -87,11 +87,11 @@ for epoch in range(EPOCHS):
     print("starting epoch", epoch + 1)
 
     print("performing training")
-    for image, label in mnist_train:
+    for image, label in train_dataset:
         train_step(image, label)
 
     print("performing testing")
-    for test_image, test_label in mnist_test:
+    for test_image, test_label in test_dataset:
         test_step(test_image, test_label)
 
     template = 'Epoch {}, Loss: {}, Accuracy: {}, Test Loss: {}, Test Accuracy: {}'
