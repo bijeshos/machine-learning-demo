@@ -89,17 +89,30 @@ print("Training the model")
 # use below line if tensorboard integration is not needed
 # model.fit(train_images, train_labels, epochs=5)
 
-model.fit(train_images,
+history = model.fit(train_images,
           train_labels,
           epochs=5,
           validation_data=(test_images, test_labels),
           callbacks=[tensorboard_callback])
 
+# get training parameters
+history_dict = history.history
+history_dict.keys()
+train_accuracy = history_dict['accuracy']
+train_val_accuracy = history_dict['val_accuracy']
+train_loss = history_dict['loss']
+train_val_loss = history_dict['val_loss']
+
+print("Train : accuracy:", train_accuracy)
+print("Train : val_accuracy:", train_val_accuracy)
+print("Train : loss:", train_loss)
+print("Train : val_loss:", train_val_loss)
+
 print("Evaluating accuracy")
-test_loss, test_acc = model.evaluate(test_images, test_labels)
+test_loss, test_accuracy = model.evaluate(test_images, test_labels)
 
 print("Test loss:", test_loss)
-print("Test accuracy:", test_acc)
+print("Test accuracy:", test_accuracy)
 
 
 print("----------------------------------")
