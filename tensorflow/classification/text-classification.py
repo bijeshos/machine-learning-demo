@@ -74,11 +74,18 @@ print("Building the model")
 # input shape is the vocabulary count used for the movie reviews (10,000 words)
 vocab_size = 10000
 
-model = keras.Sequential()
-model.add(keras.layers.Embedding(vocab_size, 16))
-model.add(keras.layers.GlobalAveragePooling1D())
-model.add(keras.layers.Dense(16, activation='relu'))
-model.add(keras.layers.Dense(1, activation='sigmoid'))
+# model = keras.Sequential()
+# model.add(keras.layers.Embedding(vocab_size, 16))
+# model.add(keras.layers.GlobalAveragePooling1D())
+# model.add(keras.layers.Dense(16, activation='relu'))
+# model.add(keras.layers.Dense(1, activation='sigmoid'))
+
+model = keras.Sequential([
+    keras.layers.Embedding(vocab_size, 16),
+    keras.layers.GlobalAveragePooling1D(),
+    keras.layers.Dense(16, activation='relu'),
+    keras.layers.Dense(1, activation='sigmoid')
+])
 
 model.summary()
 
