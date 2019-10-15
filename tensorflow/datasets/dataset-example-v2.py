@@ -31,34 +31,4 @@ plt.show()
 
 
 
-# for mnist_train_example in train_ds.take(1):
-#   image, label = mnist_train_example["image"], mnist_train_example["label"]
-#
-#   plt.imshow(image.numpy()[:, :, 0].astype(np.float32), cmap=plt.get_cmap("gray"))
-#   plt.show()
-#   print("Label: %d" % label.numpy())
-
-
-# for mnist_test_example in test_ds.take(1):  # Only take a single example
-#   image, label = mnist_test_example["image"], mnist_test_example["label"]
-#
-#   plt.imshow(image.numpy()[:, :, 0].astype(np.float32), cmap=plt.get_cmap("gray"))
-#   plt.show()
-#   print("Label: %d" % label.numpy())
-
-
-# dataset, info = tfds.load(name="mnist", with_info=True)
-#
-# train_data, test_data = dataset['train'], dataset[test]
-# info.features['label'].num_classes
-# info.splits['train'].num_classes
-#
-# dataset = dataset.shuffle(1024).batch(32).prefetch(tf.data.experimental.AUTOTUNE)
-
-
-# for features in dataset.take(1):
-#     image, label = features["image"], features["label"]
-#     print(image, label)
-
-
 print("Program completed")
