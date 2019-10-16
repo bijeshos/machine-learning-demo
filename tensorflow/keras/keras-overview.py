@@ -7,13 +7,14 @@ import numpy as np
 
 from tensorflow.keras import layers
 
+print("TensorFlow version: ", tf.__version__)
 print("TF Keras version: ", tf.keras.__version__)
-# print(keras.__version__)
 
+# Create a Sequential model
 model = tf.keras.Sequential()
-# Adds a densely-connected layer with 64 units to the model:
+# Add a densely-connected layer with 64 units to the model, with activation function ReLU
 model.add(layers.Dense(64, activation='relu'))
-# Add another:
+# Add another layer, similar to the above
 model.add(layers.Dense(64, activation='relu'))
 # Add a softmax layer with 10 output units:
 model.add(layers.Dense(10, activation='softmax'))
