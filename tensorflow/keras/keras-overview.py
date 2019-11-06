@@ -2,9 +2,7 @@ from __future__ import absolute_import, division, print_function
 
 import tensorflow as tf
 from tensorflow import keras
-
 import numpy as np
-
 from tensorflow.keras import layers
 
 print("TensorFlow version: ", tf.__version__)
@@ -12,10 +10,13 @@ print("TF Keras version: ", tf.keras.__version__)
 
 # Create a Sequential model
 model = tf.keras.Sequential()
+
 # Add a densely-connected layer with 64 units to the model, with activation function ReLU
 model.add(layers.Dense(64, activation='relu'))
+
 # Add another layer, similar to the above
 model.add(layers.Dense(64, activation='relu'))
+
 # Add a softmax layer with 10 output units:
 model.add(layers.Dense(10, activation='softmax'))
 
@@ -38,7 +39,6 @@ layers.Dense(64, kernel_initializer='orthogonal')
 layers.Dense(64, bias_initializer=tf.keras.initializers.Constant(2.0))
 
 # Train and evaluate
-
 model = tf.keras.Sequential([
     # Adds a densely-connected layer with 64 units to the model:
     layers.Dense(64, activation='relu', input_shape=(32,)),
@@ -62,7 +62,6 @@ model.compile(optimizer=tf.keras.optimizers.RMSprop(0.01),
               metrics=[tf.keras.metrics.CategoricalAccuracy()])
 
 # Train from NumPy data
-
 data = np.random.random((1000, 32))
 labels = np.random.random((1000, 10))
 
