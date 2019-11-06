@@ -1,6 +1,8 @@
 from __future__ import print_function
 import torch
+import numpy as np
 
+print('--- matrix construction ---')
 # construct a 5x3 matrix, uninitialized
 x = torch.empty(5, 3)
 print(x)
@@ -13,6 +15,8 @@ print(x)
 x = torch.zeros(5, 3, dtype=torch.long)
 print(x)
 
+print('--- tensor construction ---')
+
 # construct a tensor directly from data
 x = torch.tensor([5.5, 3])
 print(x)
@@ -24,6 +28,8 @@ print(x)
 x = torch.randn_like(x, dtype=torch.float)
 print(x)
 print(x.size())
+
+print('--- tensor addition ---')
 
 # addition
 y = torch.rand(5, 3)
@@ -38,6 +44,8 @@ print(result)
 y.add_(x)
 print(y)
 
+print('--- tensor operations ---')
+
 # indexing
 print(x[:, 1])
 
@@ -51,3 +59,22 @@ print(x.size(), y.size(), z.size())
 x = torch.randn(1)
 print(x)
 print(x.item())
+
+print('--- tensor > numpy / numpy > tensor conversions ---')
+
+# converting a Torch Tensor to a NumPy Array
+a = torch.ones(5)
+print(a)
+b = a.numpy()
+print(b)
+
+a.add_(1)
+print(a)
+print(b)
+
+# converting NumPy Array to Torch Tensor
+a = np.ones(5)
+b = torch.from_numpy(a)
+np.add(a, 1, out=a)
+print(a)
+print(b)
