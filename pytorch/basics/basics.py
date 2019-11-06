@@ -13,3 +13,14 @@ print(x)
 x = torch.zeros(5, 3, dtype=torch.long)
 print(x)
 
+# construct a tensor directly from data
+x = torch.tensor([5.5, 3])
+print(x)
+
+# create a tensor based on an existing tensor
+x = x.new_ones(5, 3, dtype=torch.double)
+print(x)
+
+x = torch.randn_like(x, dtype=torch.float)
+print(x)
+print(x.size())
