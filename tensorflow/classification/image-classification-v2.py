@@ -18,7 +18,7 @@ print("----------------------------------")
 print("Tensorflow version: ", tf.__version__)
 print("----------------------------------")
 
-print("Importing Fashion MNIST dataset (using TFDS)")
+print("Importing MNIST dataset (using TFDS)")
 train_tfds_dataset, test_tfds_dataset = tfds.load('mnist:3.*.*', split=['train', 'test'], batch_size=-1)
 
 # convert to numpy array
@@ -36,6 +36,9 @@ test_images = test_images.reshape(test_images.shape[0], test_images.shape[1], te
 print("Storing class names")
 class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
                'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+
+class_names = ['Zero', 'One', 'Two', 'Three', 'Four',
+               'Five', 'Six', 'Seven', 'Eight', 'Nine']
 
 print("----------------------------------")
 print("Exploring data")
