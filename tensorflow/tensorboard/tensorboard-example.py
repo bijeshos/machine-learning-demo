@@ -12,6 +12,8 @@ $ tensorboard --logdir ./../logs/fit/
 e.g. http://<host>:6008
 
 """
+# reference: https://www.tensorflow.org/tutorials
+
 
 import tensorflow as tf
 import datetime
