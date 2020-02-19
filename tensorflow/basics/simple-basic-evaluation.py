@@ -1,6 +1,8 @@
 """
 A simple program to train and evaluate using MNIST dataset
 """
+# reference: https://www.tensorflow.org/tutorials
+
 
 from __future__ import absolute_import, division, print_function
 
