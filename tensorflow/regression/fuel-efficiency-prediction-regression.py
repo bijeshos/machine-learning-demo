@@ -1,6 +1,8 @@
 """
 A simple program to predict fuel efficiency using regression methods
 """
+# reference: https://www.tensorflow.org/tutorials
+
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
